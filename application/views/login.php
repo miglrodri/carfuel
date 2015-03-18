@@ -1,39 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Login Form</title>
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css"
-		type="text/css" media="all">
-</head>
-<body>
+<h1 class="center">Entre na sua conta</h1>
 
-<div id="signup_form">
+<?php echo form_open('login/submit', array('class' => 'page-form')); ?>
 
-	<p class="heading">User Login</p>
+<?php echo validation_errors('<p class="error">','</p>'); ?>
 
-	<?php echo form_open('login/submit'); ?>
+<p>
+	<label for="email" class="sr-only">E-mail: </label>
+	<?php echo form_input(array('name' => 'email', 'value' => set_value('email'), 'class' => 'form-control', 'placeholder' => 'Endereço de email')); ?>
+</p>
 
-	<?php echo validation_errors('<p class="error">','</p>'); ?>
+<p>
+	<label for="password" class="sr-only">Password: </label>
+	<?php echo form_password(array('name' => 'password', 'id' => 'password', 'class' => 'form-control', 'placeholder' => 'Palavra passe')); ?>
+</p>
 
-	<p>
-		<label for="username">Username: </label>
-		<?php echo form_input('username',set_value('username')); ?>
-	</p>
-	<p>
-		<label for="password">Password: </label>
-		<?php echo form_password('password'); ?>
-	</p>
-	<p>
-		<?php echo form_submit('submit','Login'); ?>
-	</p>
+<p class="center">
+	<?php echo form_submit(array('class' => 'submit-button btn btn-lg button', 'name' => 'submit'),'Entrar'); ?>
+</p>
 
-	<?php echo form_close(); ?>
-	<p>
-		<?php echo anchor('signup','Create an Account'); ?>
-	</p>
+<?php echo form_close(); ?>
 
-</div>
-
-</body>
-</html>
+<p class="center">
+	<?php echo anchor('signup','Não tem uma conta? Crie uma nova'); ?>
+</p>

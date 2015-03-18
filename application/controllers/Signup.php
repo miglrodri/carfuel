@@ -10,7 +10,10 @@ class Signup extends CI_Controller {
 
 	public function index() {
 		// TODO preserve the values if there was POST request
+		$data['page_title'] = "Registo de nova conta";
+		$this->load->view('templates/header', $data);
 		$this->load->view('signup');
+		$this->load->view('templates/footer');
 	}
 
 	public function submit() {

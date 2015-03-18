@@ -10,7 +10,11 @@ class Login extends CI_Controller {
 
 	public function index() {
 		// TODO preserve the values if there was POST request
+		$data['page_title'] = "Entre na sua conta";
+		$this->load->view('templates/header', $data);
 		$this->load->view('login');
+		$this->load->view('templates/footer');
+
 	}
 
 	public function submit() {
