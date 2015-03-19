@@ -1,11 +1,13 @@
 /*
-yellow: fdbb30;
-white: ffffff;
-black: 222020;
+fundo-header: 273135;
+text: 89949b;
+text2: e76049;
+fundo: e9f0f5;
+fundo-box: 222020;
 */
 
 body {
-	background-color: #fdbb30;
+	background-color: #e9f0f5;
 	max-width: 1170px;
 	margin: 0 auto;
 }
@@ -23,39 +25,58 @@ body {
 }
 
 .navbar {
+	background-color: #273135;
 	min-height: 0px;
 	font-family: 'Roboto', sans-serif;
+	border-radius: 0 !important;
 }
 
 .brand {
 	font-weight: bold;
-	color: #222020;
+	color: white;
 	font-size: 2em;
 }
 
 .brand:hover {
-	color: #222020;
+	color: white;
 }
 
 .brand:visited {
-	color: #222020;
+	color: white;
 }
 
 .navbar-nav li a.link {
-	color: #222020;
+	color: #e76049;
 	font-size: 1.5em;
 	background-color: transparent;
 }
 
 .navbar-nav li a.link:hover {
-	color: #222020;
+	color: #e76049;
 	text-decoration: underline;
 }
 
+.header-text {
+	color: white;
+	font-size: 1.5em;
+}
+
+.logout-button {
+	color: #89949b;
+	font-size: 1.5em;
+}
+.logout-button:hover {
+	color: white;
+	text-decoration: none;
+}
+
+
 /* GLOBAL */
 .container {
+	background-color: white;
 	font-family: 'Lato', sans-serif;
 	font-weight: normal;
+	padding-bottom: 20px;
 }
 
 .container h1 {
@@ -159,3 +180,44 @@ hr {
 	border-color: gray;
 }
 
+.car-title p {
+	padding: 10px;
+	background-color: #273135;
+	color: white;
+	font-size: 2em;
+}
+
+.car-info p {
+	padding: 10px;
+	background-color: #fa7252;
+	color: white;
+	font-size: 1.5em;
+}
+
+.car-title .fa-car {
+	font-size: 1em;
+}
+
+.car-title .fa-pencil, .car-title .fa-trash-o {
+	color: #68a0a5;
+	font-size: 0.8em;
+}
+
+.car-title .fa-pencil:hover, .car-title .fa-trash-o:hover {
+	color: white;
+}
+
+.car-info .fa-calculator {
+	font-size: 1em;
+}
+
+.row a {
+	color: #273135;
+	border: #273135 dashed 1px;
+	text-decoration: none;
+}
+
+.row a:hover{
+	color: black;
+	border: black dashed 1px;
+}

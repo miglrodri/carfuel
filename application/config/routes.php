@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['install'] = 'install/reset';
 //$route['install/(:any)']="install/$1";
 $route['install/(.+)']="install/$1";
+$route['dashboard'] = 'backend/dashboard'; 

@@ -21,7 +21,7 @@ class Signup extends CI_Controller {
 			$this->index();
 			return;
 		}
-		redirect(base_url().'install/schema');
+		redirect(base_url('dashboard'));
 	}
 
 	private function _submit_validate() {

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>CarFuel - Não encontrámos o que procurava</title>
+	<title>CarFuel - <?= $page_title; ?></title>
 
 	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -14,7 +14,7 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-	<link rel="stylesheet" type="text/css" href="/public/css/style_mike.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/style_mike_backend.css')?>">
 	
 </head>
 <body>
@@ -26,8 +26,8 @@
 			</div>
 			<div>
 				<ul class="nav navbar-nav navbar-right">
-				    <li><a class="link" href="/signup">Registe-se grátis</a></li>
-				    <li><a class="link" href="/login">Entrar</a></li>
+				    <li><p class="navbar-text header-text">Olá <?php echo ucfirst($user_email); ?>.</p></li>
+				    <li><p class="navbar-text header-text-logout"><a href="/logout" class="navbar-link logout-button"><i class="fa fa-sign-out"></i> Sair</a></p></li>
 				 </ul>
 			</div>
 		</div>
@@ -35,19 +35,3 @@
 	
 
 	<div class="container">
-		<h1>Não conseguimos encontrar a página que estava à procura.</h1>
-		<p>Volte à <a class="link" href="/">página inicial</a>.</p>
-	</div>
-
-	<footer>
-		<div class="center">
-            <p><a target="_blank" href="http://pt.linkedin.com/pub/miguel-jesus/1b/127/315/en">Miguel J. &copy; <?= date("Y"); ?></p>
-        </div>
-	</footer>
-	
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-</body>
-</html>

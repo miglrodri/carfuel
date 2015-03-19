@@ -45,7 +45,7 @@ class Login extends CI_Controller {
 		//return Current_User::login('miguel', '1234567');
 		$this->session->set_userdata('email', 'miguel');
 		$this->session->set_userdata('id', '17');
-		redirect(base_url());
+		redirect(base_url('dashboard'));
 		//return true;
 	}
 }
